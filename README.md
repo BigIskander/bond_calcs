@@ -26,7 +26,7 @@ $$  %this formula is written in LaTeX format%
 P =\frac{1 + c * m}{ \left(1 + y\right)^{m} } 
 $$
 
-*Формула расчета дюрации купонной облигации:*
+*Formula to calculate the duration of coupon paying bond:*
 
 $$ %this formula is written in LaTeX format% 
 D = \frac{
@@ -36,7 +36,7 @@ D = \frac{
 }
 $$
 
-*Формула расчета дюрации облигации с выплатой купона при погашении:*
+*Formula to calculate the duration of bond paying only one coupon at maturity:*
 
 $$ %this formula is written in LaTeX format% 
 D = \frac{
@@ -46,50 +46,51 @@ D = \frac{
 }
 $$
 
-***Описание переменных:***
+***Description of variables:***
 
-*P* - цена облигации при размещении (посчитанная как процент (доля) от номинала облигации)
+*P* - bond price at issue (calculated as percent (part) of bond's nominal value)
 
-*D* - дюрация облигации при размещении (посчитанная как процент (доля) от продолжительности базового периода)
+*D* - bond duration at issue (calculated as percent (part) of bond's base period)
 
-*c* - coupon rate (в процентах (долях) от номинала облигации)
+*c* - coupon rate (as percent (part) of bond's nominal value)
 
-*f* - частота купонных платежей (число купонных платежей в базовый период)
+*f* - frequency of coupon payments (number of coupon payments in base period)
 
-*a* - продолжительность первого неполного купоннога периода (посчитанная как процент (доля) от продолжительности базового периода)
+*a* - legth of first incomplety coupon period (calculated as percent (part) of base period)
 
-*n* - число полных купонных платежей (или периодов)
+*n* - number of complete coupn payments (or periods)
 
-*m* - срок до погашения облигации (посчитанная как процент (доля) от продолжительности базового периода)
+*m* - time to maturity of the bond (calculated as percent (part) of base period)
 
-*y* - доходность к погашению (в процентах (долях) от номинала облигации)
+*y* - yield to maturity (calculated as percent (part) of bond's nominal value)
 
-***Примечания:***
+***Notes:***
 
-1) Показатель coupon rate представляется в базе Compustat в уже рассчитанном виде, но при необходимости coupon rate можно посчитать как:
+1) Coupon rate is provided as already calculated value in Compustat database, however if need coupon rate can be calculated as:
 
 $$ %this formula is written in LaTeX format%
 c = \frac{ \sum c_i }{m}
 $$
 
-где *c* - coupon rate, $c_i$ - отдельный купонный платеж (как процент (доля) от номинала), m - срок до погашения (смотрите выше)
+where *c* - coupon rate, $c_i$ - separate coupon payment (as percent (part) of nominal value), m - time to maturity (look higher)
 
-2) Дата первого купонного платежа часто бывает указана в базе **Compustat**.
+2) Date of first coupon payment frequently is mentioned in **Compustat** database.
 
-3) В базе **Compustat** для всех облигаций указан номинал равный 1.00 (или 100%). Цена облигации, coupon rate и доходность к погашению указываются, как процент (доля) от номинала.
+3) In **Compustat** database for all bonds nominal value is mentioned as 1.00 (or 100%). Bond price, coupon rate and yield to maturity represented as percent (part) of bond's nominal value.
 
-4) Продолжительность базового периода, обычно составляет 1 год. Но могут встречаться облигации и с другой продолжительностю базового периода.
+4) The length of base period usually 1 year. However there are also bonds with different length of base period.
 
-***Как использовать:***
+***How to use:***
 
-1) В Microsoft Excel или в LibreOffice Calc открыть редактор макросов.
+1) In Microsoft Excel or in LibreOffice Calc open macros editor.
 
-2) Импортировать макрос (файл **bond_calcs.bas**) или, как альтернативный вариант, можно скопировать и вставить содержимое файла **bond_calcs.bas** в редактор макросов.
+2) Import macros (file **bond_calcs.bas**) or as alternative, you can just copy and paste the content of **bond_calcs.bas** file into macros editor.
 
-3) Использовать как обычную формулу в Microsoft Excel или в LibreOffice Calc, т.е. в нужную ячейку таблицы прописать формулу (функцию):
+3) Use it as usual formula in Microsoft Excel or in LibreOffice Calc, i.e. write formula (function) in necessary cell of a table: 
 
-    - `=CalcPrice(y; c; f; m; a)` или `=CALCPRICE(y; c; f; m; a)` - для расчета цены облигации
-    - `=CalcDurat(y; c; f; m; a)` или `=CALCDURAT(y; c; f; m; a)` - для расчета дюрации облигации
-    - где вместо *y*, *c*, *f*, *m*, *a* указать конкретные цифры (описание переменных смотрите выше)
-    - если облигация с выплатой купона при погашении, то *f* указать как *0* (цифра ноль)
-    - если дата первого купонного платежа не указана, то *a* указать как *0* (цифра ноль)
+    - `=CalcPrice(y; c; f; m; a)` or `=CALCPRICE(y; c; f; m; a)` - to calculate bond price
+    - `=CalcDurat(y; c; f; m; a)` or `=CALCDURAT(y; c; f; m; a)` - to calculate bond duration
+    - where instead of *y*, *c*, *f*, *m*, *a* put particular number (the description of variables look higher)
+    - if bond pays only one coupon at maturity, then *f* put as *0* (number zero)
+    - if date of first coupon payment is not mentioned, then *a* put as *0* (number zero)
+
