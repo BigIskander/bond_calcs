@@ -8,7 +8,7 @@ These macroses can be used with **Microsoft Excel** as well as with **LibreOffic
 
 I used these macroses for my scientific research. For those who interested, list of my scientific papers available by [this link](https://bigiskander.github.io/my_science_papers.html) (in Russian).
 
-These macroses (created) written in order to be used with data from **Compustat** database and was written according with data representation specifics of this dtabase.
+These macroses (created) written in order to be used with data from **Compustat** database and was written according with data representation specifics of this database.
 
 Below is the description of computational formulas and instruction how to use these macroses.
 
@@ -56,9 +56,9 @@ $$
 
 *f* - frequency of coupon payments (number of coupon payments in base period)
 
-*a* - legth of first incomplety coupon period (calculated as percent (part) of base period)
+*a* - length of first incomplete coupon period (calculated as percent (part) of base period)
 
-*n* - number of complete coupn payments (or periods)
+*n* - number of complete coupon payments (or periods)
 
 *m* - time to maturity of the bond (calculated as percent (part) of base period)
 
