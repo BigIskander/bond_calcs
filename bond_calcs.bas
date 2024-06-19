@@ -7,7 +7,7 @@ Option VBASupport 1
 'g - coupon rate (total coupon payment in one base period as percent from nominal price) (value 0.01 equals 1%)
 'f - frequency, i.e. number of payments in one base period (equals 0 - for bond with only one coupon in the matrurity date)
 'M - maturity as number of base periods
-'fm - period of time before first payment (as percent from base period, equals 0 if no such period is mentioned)
+'fp - period of time before first payment (as percent from base period, equals 0 if no such period is mentioned)
 Public Function CalcPrice(y As Double, g As Double, f As Integer, M As Double, Optional fp As Double = 0) As Double
     If f > 0 Then
         'full number of periods
@@ -42,7 +42,7 @@ End Function
 'g - coupon rate (total coupon payment in one base period as percent from nominal price) (value 0.01 equals 1%)
 'f - frequency, i.e. number of payments in one base period (equals 0 - for bond with only one coupon in the matrurity date)
 'M - maturity as number of base periods
-'fm - period of time before first payment (as percent from base period, equals 0 if no such period is mentioned)
+'fp - period of time before first payment (as percent from base period, equals 0 if no such period is mentioned)
 Public Function CalcDurat(y As Double, g As Double, f As Integer, M As Double, Optional fp As Double = 0) As Double
     If f > 0 Then
         'full number of periods
